@@ -11,7 +11,15 @@ const server = http.createServer((req, res) => {
     res.writeHead(204);
     return res.end();
   }
-  handler(req, res);
+
+  if (typeof handler === "function") {
+    handler(req, res);
+  } else if (typeof handler.handler === "function") {
+    handler.handler(req, res);
+  } else {
+    res.writeHead(500);
+    res.end("Addon interface is not callable");
+  }
 });
 
 const port = process.env.PORT || 7000;
