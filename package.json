@@ -7,6 +7,6 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "stremio-addon-sdk": "^0.1.22"
+    "stremio-addon-sdk": "latest"
   }
 }
