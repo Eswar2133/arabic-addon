@@ -1,6 +1,6 @@
-const { addonBuilder } = require("stremio-addon-sdk");
+const addonSDK = require("stremio-addon-sdk");
 
-const builder = addonBuilder({
+const builder = addonSDK.addonBuilder({
   id: "org.arabic.sdk",
   version: "1.0.0",
   name: "Arabic Classics SDK",
